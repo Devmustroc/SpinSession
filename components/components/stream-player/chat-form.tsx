@@ -1,14 +1,12 @@
 "use client";
 
-import {useRef, useState} from "react";
-
+import {useState} from "react";
 import { cn } from "@/lib/utils";
-import Picker from "emoji-picker-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import ChatTextInfo from "@/components/components/stream-player/chat-text-info";
-import {Laugh} from "lucide-react";
+
 
 
 interface ChatFormProps {

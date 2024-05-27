@@ -49,7 +49,8 @@ const Navigation = () => {
                 })]}
             </ul>
         )
-    };
+    }
+
     return (
         <ul
             className="space-y-2 px-2 pt-4 lg:pt-0"

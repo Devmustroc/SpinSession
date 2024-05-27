@@ -1,6 +1,6 @@
 'use client';
 
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import { format } from 'date-fns';
 import {ReceivedChatMessage} from "@livekit/components-react";
 import {stringToColor} from "@/lib/utils";

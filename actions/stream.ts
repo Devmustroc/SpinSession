@@ -17,7 +17,9 @@ export const updateStream = async (data: Partial<Stream>) => {
             },
         });
 
-        if (!selfStream) throw new Error("Stream not found");
+        if (!selfStream) {
+           return null;
+        }
         const validateData = {
             name: data.name,
             isChatEnabled: data.isChatEnabled,

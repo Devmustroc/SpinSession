@@ -38,9 +38,9 @@ const LiveVideo: FC<LiveVideoProps> = ({ participant }) => {
 
     const toggleFullscreen = () => {
         if (isFullScreen) {
-            document.exitFullscreen().then(r =>  {
+            document.exitFullscreen().then(() =>  {
                 toast.success("Exited fullscreen");
-            }).catch(e => {
+            }).catch(() => {
                 toast.error("Failed to exit fullscreen");
             });
         } else if(wrapperRef.current) {

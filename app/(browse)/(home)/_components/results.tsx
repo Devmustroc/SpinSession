@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {getStreams} from "@/lib/seedService";
 import ResultCard from "@/components/components/resultcard";
 

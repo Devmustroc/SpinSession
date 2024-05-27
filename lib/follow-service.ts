@@ -86,7 +86,7 @@ export const isFollowingUser = async (userId: string) => {
             }
         });
         if (!otherUser) {
-            throw new Error("User not found");
+            return false;
         }
 
         if (otherUser.id === self.id) {

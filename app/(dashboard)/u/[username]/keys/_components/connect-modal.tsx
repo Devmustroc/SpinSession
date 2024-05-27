@@ -30,7 +30,7 @@ const ConnectModal = () => {
                     closeRef.current?.click();
                 })
 
-                .catch((err) => toast.error("something went wrong"));
+                .catch(() => toast.error("something went wrong"));
         });
     }
     return (

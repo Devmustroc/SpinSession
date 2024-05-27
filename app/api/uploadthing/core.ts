@@ -1,5 +1,5 @@
 import { createUploadthing, type FileRouter } from "uploadthing/next";
-import { UploadThingError } from "uploadthing/server";
+
 import {getSelf} from "@/lib/auth-service";
 import {db} from "@/lib/db";
 

@@ -1,5 +1,4 @@
-import Results, {ResultSkeleton} from "@/app/(browse)/(home)/_components/results";
-import {Suspense} from "react";
+import Results from "@/app/(browse)/(home)/_components/results";
 
 export default function Page() {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {cn} from "@/lib/utils";
-import {Ghost, Shield, UserRoundCheck} from "lucide-react";
+import {Shield, UserRoundCheck} from "lucide-react";
 
 const ButtonParticipant = ({ name, isSelf,  isHost}: { name: string, isSelf: boolean, isHost: boolean }) => {
     return (

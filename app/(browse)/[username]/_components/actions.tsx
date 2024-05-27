@@ -5,7 +5,7 @@ import React, {useTransition} from 'react';
 import {Button} from "@/components/ui/button";
 import {onFollow, onUnfollow} from "@/actions/follow";
 import {toast} from "sonner";
-import {onBlock, onUnblock} from "@/actions/block";
+import {onUnblock} from "@/actions/block";
 
 
 interface ActionsProps {
@@ -18,70 +18,49 @@ const Actions = ({ isFollowing, userId }: ActionsProps) => {
     const handleFollow = () => {
         startTransition(() => {
             onFollow(userId)
-                .then((data) => toast.success("You are now following this user ✅"))
-                .catch((data) => toast.error("Failed to follow ❌"))
+                .then((data) => toast.success(`You are now following ${data.following.username}`))
+                .catch(() => toast.error("Something went wrong"));
         });
-    }
+    };
+
     const handleUnfollow = () => {
         startTransition(() => {
             onUnfollow(userId)
-                .then((data) => toast.success("You are now unfollowing this user ✅"))
-                .catch((data) => toast.error("Failed to unfollow ❌"))
+                .then((data) => toast.success(`You have unfollowed ${data?.following.username}`))
+                .catch(() => toast.error("Something went wrong"));
         });
-    }
+    };
 
-    const onClick = isFollowing ? handleUnfollow : handleFollow;
+    const onClick = () => {
+        if (isFollowing) {
+            handleUnfollow();
+        } else {
+            handleFollow();
+        }
+    }
 
     const handleBlock = () => {
         startTransition(() => {
-            onBlock(userId)
-                .then((data) => {
-                    if (data && data.blockedId) {
-                        toast.success(`You have blocked this user ✅ ${data.blocked.username}`)
-                    }
-                })
-                .catch((data) => {
-                    if (data && data.blockedId) {
-                        toast.error(`Failed to block ❌ ${data.blocked.username}`)
-                    }
-                })
-        });
-    }
-
-    const handleUnblock = () => {
-        startTransition(() => {
             onUnblock(userId)
-                .then((data) => toast.success(`You have unblocked this user ✅ `))
-                .catch((data) => toast.error(`Failed to unblock ❌ ${data.blocked.username}`))
-        })
-    }
+                .then((data) => toast.success(`Unblocked the user ${data.blocked.username}`))
+                .catch(() => toast.error("Something went wrong"));
+        });
+    };
 
-    const onBlockClick = isFollowing ? handleUnblock : handleBlock;
+
     return (
         <>
             <Button
-                disabled={isPending }
+                disabled={isPending}
                 onClick={onClick}
                 variant="primary"
             >
                 {isFollowing ? "Unfollow" : "Follow"}
             </Button>
-            <Button
-                disabled={isPending }
-                onClick={handleUnblock}
-                variant="danger"
-            >
-                UnBlock
-            </Button>
-            <Button
-                disabled={isPending }
-                onClick={handleBlock}
-                variant="danger"
-            >
+            <Button onClick={handleBlock} disabled={isPending}>
                 Block
             </Button>
         </>
-
     );
 };
 

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {BadgeCheck, Check} from "lucide-react";
+import {BadgeCheck} from "lucide-react";
 import {cn} from "@/lib/utils";
 
 interface VerifiedMarkProps {

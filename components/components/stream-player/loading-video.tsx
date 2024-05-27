@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {WifiOffIcon} from "lucide-react";
 import {ScaleLoader} from "react-spinners";
 
 interface LoadingVideoProps {

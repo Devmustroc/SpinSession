@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import UserAvatar from "@/components/components/user-avatar";
 import Image from "next/image";
-import {Skeleton} from "@/components/ui/skeleton";
 
 interface ThumbnailProps {
     src: string | null;

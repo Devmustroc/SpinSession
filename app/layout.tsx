@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Arimo } from 'next/font/google'
-import { Chivo } from 'next/font/google'
+import {Inter} from 'next/font/google'
 import "./globals.css";
 import {ClerkProvider} from "@clerk/nextjs";
 import { dark } from "@clerk/themes"
@@ -9,16 +8,7 @@ import {ReactNode} from "react";
 import {Toaster} from "sonner";
 
 
-const arimo = Arimo({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-arimo',
-})
-const chivo = Chivo({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-chivo',
-})
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +27,7 @@ export default function RootLayout({
         }}
       >
         <html lang="en">
-              <body className={arimo.variable + ' ' + chivo.variable}>
+              <body className={inter.className}>
                   <ThemeProvider
                       attribute="class"
                       forcedTheme="light"

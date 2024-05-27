@@ -5,7 +5,7 @@ import {currentUser, SignInButton, UserButton} from "@clerk/nextjs";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 
-import {ClipboardCheck, ClipboardSignature} from "lucide-react";
+import {ClipboardCheck} from "lucide-react";
 
 
 const Actions = async () => {

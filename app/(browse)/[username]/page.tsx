@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import {getUserByUsername} from "@/lib/user-service";
 import {notFound} from "next/navigation";
 import {isFollowingUser} from "@/lib/follow-service";
-import Actions from "@/app/(browse)/[username]/_components/actions";
 import {isBlockedByUser} from "@/lib/block-service";
 import StreamPlayer from "@/components/components/stream-player";
-import NotFoundUser from "@/app/(browse)/[username]/not-found";
+
 
 interface UserPageProps {
     params: {

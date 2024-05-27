@@ -1,7 +1,7 @@
 "use client";
 
 import React, {FC} from 'react';
-import {Stream, User} from "@prisma/client";
+import {User} from "@prisma/client";
 import {useSidebar} from "@/store/use-sidebar";
 import UserItem, {UserItemSkeleton} from "@/app/(browse)/_components/sidebar/user-item";
 

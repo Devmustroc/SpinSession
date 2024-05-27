@@ -9,7 +9,7 @@ import {Hint} from "@/components/components/hint";
 interface ChatInfoProps {
     isDelayed: boolean;
     isFollowersOnly: boolean;
-};
+}
 
 const ChatTextInfo = ({
                              isDelayed,

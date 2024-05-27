@@ -1,5 +1,5 @@
-import React, {FC, useMemo, useTransition} from 'react';
-import {cn, stringToColor } from "@/lib/utils";
+import React, {FC, useTransition} from 'react';
+import {cn} from "@/lib/utils";
 import {Hint} from "@/components/components/hint";
 import {Button} from "@/components/ui/button";
 import {MinusCircle} from "lucide-react";

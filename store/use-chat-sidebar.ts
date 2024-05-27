@@ -3,7 +3,7 @@ import { create } from "zustand";
 export enum ChatVariant {
     CHAT = "CHAT",
     COMMUNITY = "COMMUNITY"
-};
+}
 
 interface ChatSidebarStore {
     collapsed: boolean;
@@ -11,7 +11,7 @@ interface ChatSidebarStore {
     onExpand: () => void;
     onCollapse: () => void;
     onChangeVariant: (variant: ChatVariant) => void;
-};
+}
 
 export const useChatSidebar = create<ChatSidebarStore>((set) => ({
     collapsed: false,
