@@ -3,7 +3,7 @@ import { authMiddleware } from "@clerk/nextjs";
 // See https://clerk.com/docs/references/nextjs/auth-middleware
 // for more information about configuring your Middleware
 export default authMiddleware({
-    // Allow signed out users to access the specified routes:
+
     publicRoutes: [
         "/",
         "/api/webhooks(.*)",
@@ -18,6 +18,7 @@ export const config = {
         // Exclude files in the _next directory, which are Next.js internals.
         "/((?!.+\\.[\\w]+$|_next).*)",
         // Re-include any files in the api or trpc folders that might have an extension
-        "/(api|trpc)(.*)"
+        "/(api|trpc)(.*)",
+        "/api/sentry-example-api",
     ]
 };
