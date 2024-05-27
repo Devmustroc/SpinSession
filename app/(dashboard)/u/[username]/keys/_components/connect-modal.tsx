@@ -22,6 +22,7 @@ const ConnectModal = () => {
     const [isPending, startTransition] = useTransition();
     const [ingressType, setIngressType] = useState<IngressType>(RTMP);
 
+
     const onSubmit = () => {
         startTransition(() => {
             createIngress(parseInt(ingressType))
