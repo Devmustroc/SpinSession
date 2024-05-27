@@ -47,7 +47,7 @@ const Index: FC<StreamPlayerProps> = ({
             }
             <LiveKitRoom
                 token={token}
-                serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_WS_URL}
+                serverUrl={process.env.LIVEKIT_WS_URL}
                 className={cn("grid grid-cols-1 lg:gap-y-1 lg:grid-cols-2 xl:grid-cols-7 2xl:grid-cols-7",
                     collapsed && "lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2"
                 )}
