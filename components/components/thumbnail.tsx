@@ -54,14 +54,3 @@ const Thumbnail: FC<ThumbnailProps> = ({
 };
 
 export default Thumbnail;
-
-
-const ThumbnailSkeleton = () => {
-    return (
-        <div
-            className="aspect-video group relative rounded-md cursor-pointer"
-        >
-            <Skeleton className="h-full w-full" />
-        </div>
-    );
-}

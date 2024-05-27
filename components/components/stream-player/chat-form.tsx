@@ -30,10 +30,8 @@ export const ChatForm = ({
                              isFollowing,
                              isDelayed,
                          }: ChatFormProps) => {
-    const [chosenEmoji, setChosenEmoji] = useState<any | null>(null);
-    /*const [emojiPickerState, SetEmojiPicker] = useState(false);*/
+
     const [isDelayBlocked, setIsDelayBlocked] = useState(false);
-    const emojiPickerRef = useRef<any | null>(null)
 
     const isFollowersOnlyAndNotFollowing = isFollowersOnly && !isFollowing;
     const isDisabled = isHidden || isDelayBlocked || isFollowersOnlyAndNotFollowing;

@@ -22,7 +22,6 @@ const CommunityItem: FC<CommunityItem>= ({
                                          }) => {
     const [isPending, startTransition] = useTransition()
 
-    const color = stringToColor(participantName || '')
     const isSelf = participantName === viewerName
     const isHost = viewerName === hostName
 

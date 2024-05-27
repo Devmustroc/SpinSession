@@ -70,7 +70,7 @@ const ChatCommunity: FC<ChatCommunityProps> = ({
                     No results
                 </p>
                 {
-                    participants.map((participant) => {
+                    filteredParticipants.map((participant) => {
                         return (
                             <CommunityItem
                                 key={participant.identity}

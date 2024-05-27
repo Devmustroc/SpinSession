@@ -6,6 +6,7 @@ import { useTracks } from "@livekit/components-react";
 import FullscreenControl from "@/components/components/stream-player/fullscreen.control";
 import {useEventListener} from "usehooks-ts";
 import VolumControl from "@/components/components/stream-player/volum-control";
+import {toast} from "sonner";
 
 interface LiveVideoProps {
     participant: Participant
@@ -37,7 +38,11 @@ const LiveVideo: FC<LiveVideoProps> = ({ participant }) => {
 
     const toggleFullscreen = () => {
         if (isFullScreen) {
-            document.exitFullscreen().then(r => console.log(r)).catch(e => console.error(e));
+            document.exitFullscreen().then(r =>  {
+                toast.success("Exited fullscreen");
+            }).catch(e => {
+                toast.error("Failed to exit fullscreen");
+            });
         } else if(wrapperRef.current) {
             wrapperRef.current.requestFullscreen().then(r => console.log(r)).catch(e => console.error(e));
         }
