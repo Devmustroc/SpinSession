@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderPage from "@/app/spinsession/_components/header-page";
+import HeaderPage from "@/app/spinsession/_components/headerPage";
 import Hero from "@/app/spinsession/_components/hero";
 import Features from "@/app/spinsession/_components/features";
 import Footer from "@/app/spinsession/_components/footer";
