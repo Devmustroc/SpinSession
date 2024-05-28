@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import {WavyBackground} from "@/app/spinsession/_components/wavy-background";
+import {WavyBackground} from "@/app/spins/_components/wavy-background";
 
 
 const Hero = () => {
