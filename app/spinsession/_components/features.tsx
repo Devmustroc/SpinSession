@@ -35,14 +35,6 @@ const Features = () => {
                         </p>
                     </div>
                     <div className="grid gap-1">
-                        <h3 className="text-lg font-bold">Social Sharing</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
-                            Integrate your social media accounts and share your DJ sets with your followers, expanding
-                            your reach
-                            and engagement.
-                        </p>
-                    </div>
-                    <div className="grid gap-1">
                         <h3 className="text-lg font-bold">
                             Invite Your Fans
                         </h3>
